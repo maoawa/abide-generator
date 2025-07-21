@@ -1,0 +1,84 @@
+{
+    "degrees":{
+        "bs": "Bachelor of Science (B.S.)",
+        "ms": "Master of Science (M.S.)",
+        "scd": "Doctor of Science (Sc.D.)",
+        "md": "Doctor of Medicine (M.D.)",
+        "ba": "Bachelor of Arts (B.A.)",
+        "ma": "Master of Arts (M.A.)",
+        "phd": "Doctor of Philosophy (Ph.D.)",
+        "bfa": "Bachelor of Fine Arts (B.F.A.)",
+        "mfa": "Master of Fine Arts (M.F.A.)",
+        "bba": "Bachelor of Business Administration (B.B.A.)",
+        "mba": "Master of Business Administration (M.B.A.)",
+        "jd": "Juris Doctor (J.D.)",
+        "edd": "Doctor of Education (Ed.D.)",
+        "custom": "Custom..."
+    },
+    "degreeFields":{
+        "bs": [
+            "Biology",
+            "Computer Science",
+            "Mathematics",
+            "Physics"
+        ],
+        "ms": [
+            "Engineering",
+            "Data Science",
+            "Environmental Science"
+        ],
+        "scd": [
+            "Chemistry",
+            "Applied Mathematics"
+        ],
+        "md": [
+            "Pediatrics",
+            "Surgery",
+            "Internal Medicine"
+        ],
+        "ba": [
+            "History",
+            "Philosophy",
+            "English Literature",
+            "Political Science"
+        ],
+        "ma": [
+            "Sociology",
+            "Linguistics",
+            "International Relations"
+        ],
+        "phd": [
+            "Neuroscience",
+            "Economics",
+            "Philosophy"
+        ],
+        "bfa": [
+            "Graphic Design",
+            "Painting",
+            "Photography"
+        ],
+        "mfa": [
+            "Creative Writing",
+            "Theatre",
+            "Sculpture"
+        ],
+        "bba": [
+            "Accounting",
+            "Finance",
+            "Marketing"
+        ],
+        "mba": [
+            "Finance",
+            "Entrepreneurship",
+            "Human Resources"
+        ],
+        "jd": [
+            "Constitutional Law",
+            "Criminal Law"
+        ],
+        "edd": [
+            "Educational Leadership",
+            "Curriculum Development"
+        ]
+    }
+}

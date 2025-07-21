@@ -7,77 +7,7 @@
     <meta name="description" content="A Simple Website to Generate Certificates Issued by Abide University.">
 </head>
 <body>
-    <div class="container">
-
-        <div class="title">Abide Generator</div>
-
-        <span class="text">
-            This is a simple website to generate the <strong>Honorary Degrees Certificates</strong> issued by <strong>Abide University And Institute (AUI)</strong>, a fictional university based in the <strong>United State of America</strong>.
-            <div style="height: 20px"></div>
-            According to AUI's website, an <strong>Honorary Degree</strong> is a special academic title awarded without traditional study, recognizing unique contributions or status. 
-        </span>
-
-        <div style="height: 34px;"></div>
-
-        <mdui-divider></mdui-divider>
-        <div class="placeholder"></div>
-        <!-- GENERATOR -->
-
-        <mdui-text-field label="Your Full Name" id="name" placeholder="John A. Doe" variant="outlined"></mdui-text-field>
-
-        <mdui-select label="Degree" id="degree" variant="outlined">
-            <mdui-menu-item value="bs">Bachelor of Science (B.S.)</mdui-menu-item>
-            <mdui-menu-item value="ms">Master of Science (M.S.)</mdui-menu-item>
-            <mdui-menu-item value="scd">Doctor of Science (Sc.D.)</mdui-menu-item>
-            <mdui-menu-item value="md">Doctor of Medicine (M.D.)</mdui-menu-item>
-            <mdui-menu-item value="ba">Bachelor of Arts (B.A.)</mdui-menu-item>
-            <mdui-menu-item value="ma">Master of Arts (M.A.)</mdui-menu-item>
-            <mdui-menu-item value="phd">Doctor of Philosophy (Ph.D.)</mdui-menu-item>
-            <mdui-menu-item value="bfa">Bachelor of Fine Arts (B.F.A.)</mdui-menu-item>
-            <mdui-menu-item value="mfa">Master of Fine Arts (M.F.A.)</mdui-menu-item>
-            <mdui-menu-item value="bba">Bachelor of Business Administration (B.B.A.)</mdui-menu-item>
-            <mdui-menu-item value="mba">Master of Business Administration (M.B.A.)</mdui-menu-item>
-            <mdui-menu-item value="jd">Juris Doctor (J.D.)</mdui-menu-item>
-            <mdui-menu-item value="edd">Doctor of Education (Ed.D.)</mdui-menu-item>
-            <mdui-menu-item value="custom">Custom...</mdui-menu-item>
-        </mdui-select>
-
-        <div id="custom-degree-div"></div>
-
-        <div id="field-of-study"></div>
-
-        <div id="custom-field-of-study-div"></div>
-
-        <mdui-text-field label="Date of Degree" id="date-of-degree" placeholder="01/01/1970" helper-on-focus variant="outlined">
-            <span slot="helper" id="date-tips">MM/DD/YYYY format. Please ensure the selected date is not after today’s date (Pacific Time).</span>
-            <mdui-button-icon slot="end-icon" id="set-to-current-date"><mdui-icon-update></mdui-icon-update></mdui-button-icon>
-        </mdui-text-field>
-
-        <mdui-checkbox id="agree-checkbox"><span id="agree-checkbox-text">I agree not to use this degree in a way that is unlawful.</span></mdui-checkbox>
-        <br>
-        <mdui-button id="generate-button">Generate</mdui-button>
-        <br>
-        <span class="comment">By pressing Generate, you agree to be redirected to Abide University's website.</span>
-        
-
-        <!-- END OF GENERATOR -->
-        <div class="placeholder"></div>
-        <mdui-divider></mdui-divider>
-        <div class="placeholder"></div>
-
-        The trademarks, service marks, and logos of Abide University are the property of Dudeism LLC. Dudeism LLC is a limited liability company based in California, USA, and owner of the Abide University brand.
-        <br>
-        Abide Generator is an independent utility designed for quick access to specific pages on the official Abide University website. It is completely not affiliated with or endorsed by Abide University.
-        <div class="placeholder"></div>
-        Made with ❤️ and tremendous help from <a href="https://github.com/kuriyota" target="_blank">Kuriyota</a> by <a href="https://maao.cc/" target="_blank">Mars</a>.
-        <div class="placeholder"></div>
-        This website is open-source on <a href="https://github.com/maoawa/abide-generator" target="_blank">GitHub</a>.
-
-    </div>
-
-    <script type="module" src="/src/main.js"></script>
-    <script type="module" src="/src/degree-field.js"></script>
-    <script type="module" src="/src/date.js"></script>
-    <script type="module" src="/src/generate.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
