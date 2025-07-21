@@ -1,40 +1,43 @@
 @font-face {
-    font-family: 'RobotoMono';
-    src: url('RobotoMono-VariableFont_wght.ttf') format('woff');
+  font-family: 'RobotoMono';
+  src: url('RobotoMono-VariableFont_wght.ttf') format('woff');
 }
 
 body {
-    font-family: 'RobotoMono';
-    height: 2400px;
+  font-family: 'RobotoMono';
+  height: 2400px;
 }
 
 .container {
-    text-align: center;
+  text-align: center;
 }
 
 .title {
-    font-size: xx-large;
-    padding: 50px 0px;
+  font-size: xx-large;
+  padding: 50px 0px;
 }
 
 .text {
-    font-size: x-large;
+  font-size: x-large;
 }
 
 .placeholder {
-    height: 20px;
+  height: 20px;
 }
 
 .comment {
-    font-size: small;
+  font-size: small;
 }
 
-mdui-select, mdui-text-field {
-    padding: 10px;
+mdui-select,
+mdui-text-field {
+  padding: 10px;
 }
 
 body {
-  transition: background-color .25s, color .25s;
+  transition:
+    background-color 0.25s,
+    color 0.25s;
   color: var(--color-text);
   background-color: var(--color-body);
   color-scheme: var(--color-scheme);
