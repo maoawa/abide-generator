@@ -2,6 +2,8 @@ import './style.css';
 
 import '@varlet/ui/es/style';
 
+import { i18n } from './locales/main';
+
 import App from './app.vue';
 import { createApp } from 'vue';
 import {
@@ -31,6 +33,8 @@ app
   .use(Divider)
   .use(Space)
   .use(Form);
+
+app.use(i18n);
 
 Locale.add('en-US', Locale.enUS);
 Locale.use('en-US');

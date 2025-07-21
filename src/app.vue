@@ -1,7 +1,11 @@
-<script setup lang="ts">
+<script setup>
 import { ref, useTemplateRef, watch } from 'vue';
 import Data from './data.json';
 import dayjs from 'dayjs';
+import { useI18n } from 'vue-i18n';
+import { Locale } from '@varlet/ui';
+
+const { locale } = useI18n();
 
 const name = ref('');
 const degreeSelect = ref(Object.keys(Data.degrees)[0]);
@@ -11,6 +15,15 @@ const studyCustom = ref('');
 const agree = ref(false);
 const date = ref(dayjs().format('YYYY-MM-DD'));
 const ref_form = useTemplateRef('from');
+
+watch(locale, () => {
+  Locale.use(
+    {
+      en: 'en-US',
+      zhCN: 'zh-CN'
+    }[locale.value]
+  );
+});
 
 watch(
   degreeCustom,
@@ -48,22 +61,9 @@ const generate = async () => {
 <template>
   <div class="container">
     <header>
-      <h1 class="title">Abide Generator</h1>
-      <p class="text">
-        This is a simple website to generate the
-        <strong>Honorary Degrees Certificates</strong>
-        issued by
-        <strong>Abide University And Institute (AUI)</strong>
-        , a fictional university based in the
-        <strong>United State of America</strong>
-        .
-      </p>
-      <p class="text">
-        According to AUI's website, an
-        <strong>Honorary Degree</strong>
-        is a special academic title awarded without traditional study,
-        recognizing unique contributions or status.
-      </p>
+      <h1 class="title">{{ $t('title') }}</h1>
+      <p v-html="$t('text-1')"></p>
+      <p v-html="$t('text-2')"></p>
     </header>
     <var-divider />
     <main>
@@ -111,28 +111,29 @@ const generate = async () => {
             v-model="agree"
             :rules="() => (agree ? true : 'Please agree')">
             <span>
-              I agree not to use this degree in a way that is unlawful.
+              {{ $t('agree') }}
             </span>
           </var-checkbox>
         </var-space>
-        <var-button @click="generate()">Generate</var-button>
+        <var-button @click="generate()">{{ $t('generate') }}</var-button>
         <p class="comment">
-          By pressing Generate, you open a new tab to Abide University's
-          website.
+          {{ $t('text-3') }}
         </p>
       </var-form>
     </main>
     <var-divider />
     <footer>
+      <var-space justify="center">
+        <var-select variant="standard" style="width: 200px" v-model="locale">
+          <var-option value="en" label="English" />
+          <var-option value="zhCN" label="中文（中国）" />
+        </var-select>
+      </var-space>
       <p>
-        The trademarks, service marks, and logos of Abide University are the
-        property of Dudeism LLC. Dudeism LLC is a limited liability company
-        based in California, USA, and owner of the Abide University brand.
+        {{ $t('text-4') }}
       </p>
       <p>
-        Abide Generator is an independent utility designed for quick access to
-        specific pages on the official Abide University website. It is
-        completely not affiliated with or endorsed by Abide University.
+        {{ $t('text-5') }}
       </p>
       <p>
         Made with ❤️ and tremendous help from
