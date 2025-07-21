@@ -5,33 +5,23 @@
 
 body {
   font-family: 'RobotoMono';
-  height: 2400px;
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px max(calc(50vw - 500px), 20px);
   text-align: center;
 }
 
-.title {
-  font-size: xx-large;
-  padding: 50px 0px;
+h1 {
+  font-size: 3em;
 }
-
-.text {
-  font-size: x-large;
-}
-
-.placeholder {
-  height: 20px;
-}
-
-.comment {
-  font-size: small;
-}
-
-mdui-select,
-mdui-text-field {
-  padding: 10px;
+#from {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 body {

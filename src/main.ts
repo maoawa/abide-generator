@@ -13,22 +13,27 @@ import {
   Button,
   Checkbox,
   DatePicker,
-  Locale
+  Locale,
+  Divider,
+  Space,
+  Form
 } from '@varlet/ui';
 
 const app = createApp(App);
 
-app.mount('#app');
 app
   .use(Select)
   .use(Input)
   .use(Option)
   .use(Checkbox)
   .use(Button)
-  .use(DatePicker);
+  .use(DatePicker)
+  .use(Divider)
+  .use(Space)
+  .use(Form);
 
-// Locale.add('en-US',Locale.enUS)
-// Locale.use('en-US')
+Locale.add('en-US', Locale.enUS);
+Locale.use('en-US');
 
 Select.setPropsDefaults({
   variant: 'outlined'
@@ -38,3 +43,5 @@ Input.setPropsDefaults({
 });
 
 StyleProvider(Themes.md3Dark);
+
+app.mount('#app');
